@@ -115,7 +115,7 @@ def mainCalculation():
     plt.plot(K,val_Exact,'--',color='r')
     plt.xlabel("strike, K")
     plt.ylabel("TRS Price")
-    plt.legend(["COS Price","BS model"])
+    plt.legend(["COS Price","Risk-neutral expectation model"])
     plt.grid()    
     
     #Price computation
