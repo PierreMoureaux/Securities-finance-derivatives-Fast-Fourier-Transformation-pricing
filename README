@@ -1,0 +1,8 @@
+This repository aims to highlight Fast Fourier pricing methodoligies in Total return swap pricing context
+
+Four models will be detailed:
+
+- 1/Bullet TRS with fixed financing rate
+- 2/TRS with several payments
+- 3/TRS with floating financing rate uncorrelated to asset
+- 4/ TRS with floating finan cing rate correlated to asset
