@@ -80,9 +80,9 @@ def TRS_Price(payOff,S0,K,sTRS,tau,r):
     payOff = str(payOff).lower()
     K = np.array(K).reshape([len(K),1])
     if payOff == "preceiv":
-        value = S0 - np.exp(-r * tau)*(K - sTRS)
+        value = S0 - np.exp(-r * tau)*(K + sTRS)
     elif payOff == "ppay":
-        value = -(S0 - np.exp(-r * tau)*(K - sTRS))
+        value = -(S0 - np.exp(-r * tau)*(K + sTRS))
     return value
 
 def mainCalculation():
@@ -115,7 +115,7 @@ def mainCalculation():
     plt.plot(K,val_Exact,'--',color='r')
     plt.xlabel("strike, K")
     plt.ylabel("TRS Price")
-    plt.legend(["COS Price","Risk-neutral expectation model"])
+    plt.legend(["COS Price","BS model"])
     plt.grid()    
     
     #Price computation
