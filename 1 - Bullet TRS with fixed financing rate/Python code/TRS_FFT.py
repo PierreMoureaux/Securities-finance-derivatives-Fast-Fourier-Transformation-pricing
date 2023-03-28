@@ -75,14 +75,14 @@ def Chi_Psi(a,b,j):
     return value
     
 
-def TRS_Price(payOff,S_0,K,sTRS,tau,r):
-    #TRS option price under risk-neutral expectations
+def TRS_Price(payOff,S0,K,sTRS,tau,r):
+    #TRS price under risk-neutral expectations
     payOff = str(payOff).lower()
     K = np.array(K).reshape([len(K),1])
     if payOff == "preceiv":
-        value = S_0 - np.exp(-r * tau)*(K - sTRS)
+        value = S0 - np.exp(-r * tau)*(K - sTRS)
     elif payOff == "ppay":
-        value = -(S_0 - np.exp(-r * tau)*(K - sTRS))
+        value = -(S0 - np.exp(-r * tau)*(K - sTRS))
     return value
 
 def mainCalculation():
