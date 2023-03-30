@@ -76,7 +76,7 @@ def Chi_Psi(a,b,j):
     
 
 def TRS_Price(payOff,S0,K,sTRS,tau,r):
-    #TRS price under risk-neutral expectations
+    #TRS price under risk-neutral expectation
     payOff = str(payOff).lower()
     K = np.array(K).reshape([len(K),1])
     if payOff == "preceiv":
@@ -115,7 +115,7 @@ def mainCalculation():
     plt.plot(K,val_Exact,'--',color='r')
     plt.xlabel("strike, K")
     plt.ylabel("TRS Price")
-    plt.legend(["COS Price","BS model"])
+    plt.legend(["COS Price","Risk-neutral expectation model"])
     plt.grid()    
     
     #Price computation
